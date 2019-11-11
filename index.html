@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>LYC的博客</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body id="blog">
+
+
+
+<hr>
+<!-- nav end -->
+<!-- banner start -->
+<div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-article-margin">
+    <div data-am-widget="slider" class="am-slider am-slider-b1" data-am-slider='{&quot;controlNav&quot;:false}' >
+    <ul class="am-slides">
+      <li>
+            <img src="assets/i/b1.jpg">
+            <div class="blog-slider-desc am-slider-desc ">
+                <div class="blog-text-center blog-slider-con">
+                    <span><a href="" class="blog-color"> &nbsp;</a></span> 
+                    <h1 class="blog-h-margin"><a href="">自从一股逆风袭来</a></h1>
+                    <p>我便可以抗拒八面来风，驾洲而行
+                    </p>
+                    <span class="blog-bor"></span>
+                    <br><br><br><br><br><br><br>                
+                </div>
+            </div>
+      </li>
+      <li>
+            <img src="assets/i/b2.jpg">
+            <div class="am-slider-desc blog-slider-desc">
+                <div class="blog-text-center blog-slider-con">
+                    <span><a href="" class="blog-color"> &nbsp;</a></span> 
+                    <h1 class="blog-h-margin"><a href="">生与死轮回不止</a></h1>
+                    <p>我们生，他们死。
+                    </p>
+                    <span></span>                
+                </div>
+            </div>
+      </li>
+      <li>
+            <img src="assets/i/b3.jpg">
+            <div class="am-slider-desc blog-slider-desc">
+                <div class="blog-text-center blog-slider-con">
+                    <span><a href="" class="blog-color"> &nbsp;</a></span> 
+                    <h1 class="blog-h-margin"><a href="">每个人都带着面具...我不过是自制了一副而已</a></h1>
+                    <p>每张面具背后，都是另一张面具。
+                    </p>
+                    <span></span>                
+                </div>
+            </div>
+      </li>
+      <li>
+            <img src="assets/i/b2.jpg">
+            <div class="am-slider-desc blog-slider-desc">
+                <div class="blog-text-center blog-slider-con">
+                    <span><a href="" class="blog-color">&nbsp;</a></span> 
+                    <h1 class="blog-h-margin"><a href="">我于杀戮之中盛放，亦如黎明中的花朵</a></h1>
+                    <p>你，将饱含诗意! 你，会美不胜收!
+                    </p>
+                    <span></span>                
+                </div>
+            </div>
+      </li>
+    </ul>
+    </div>
+</div>
+<!-- banner end -->
+
+<!--div 理解成一个“容器”，里面放啥都行，页面布局主要是靠div来完成-->
+<!--span和div功能类似，div默认是独占一行（块级元素），span默认不独占一行（内联元素）-->
+<>
+
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed" id = "app">
+    <!--文章列表-->
+    <div class="am-u-md-8 am-u-sm-12">
+
+        <article class="am-g blog-entry-article"  v-for="blog in blogs">
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+                
+            </div>
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+              <span><a href="" class="blog-color"> {{tag_id2name(blog.tag_id)}} &nbsp</span>
+              <span>@{{author}}&nbsp;</span>
+              <span>{{blog.create_time}}</span>
+              <h1><a href="">{{blog.title}}</a></h1>
+                <p>
+                </p>
+                <p><a href="" class="blog-continue">continue reading</a></p>
+            </div>
+        </article>
+
+       
+        
+        <ul class="am-pagination">
+  
+</ul>
+    </div>
+    <!--侧边栏-->
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>Me 的介绍</span></h2>
+            <img src="images/14.jpg" alt="Me 的介绍" class="blog-entry-img" >
+            <!--插值表达式-->
+            <p>{{author}}</p>
+            <p>
+        我是一个普通的本科大学生
+        </p><p>每个人都是火柴，他们虽会燃尽，但是也能在短暂的生命里并发出耀眼的火光</p>
+        </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>Contact ME</span></h2>
+            <p>
+                <a href="https://blog.csdn.net/liuyuchen282828"><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+                <a href="https://github.com/514467952"><span class="am-icon-github am-icon-fw blog-icon"></span></a>
+                <a href="https://blog.csdn.net/liuyuchen282828"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+                <a href="https://blog.csdn.net/liuyuchen282828"><span class="am-icon-reddit am-icon-fw blog-icon"></span></a>
+                
+            </p>
+        </div>
+        <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+            <h2 class="blog-title"><span>TAG cloud</span></h2>
+            <div class="am-u-sm-12 blog-clear-padding">
+              <a href="" class="blog-tag" v-for="tag in tags">{{tag.tag_name}}</a>
+            </div>
+        </div>
+       
+    </div>
+</div>
+<!-- content end -->
+
+
+
+  <footer class="blog-footer">
+      
+    <div class="blog-text-center">© 2019 Made by 刘晓昱</div>    
+  </footer>
+
+
+
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  //<!-- el表示app这个Vue对象和哪个HTML元素关联上-->
+  var app = new Vue({
+    el:'#app',
+    data:{
+      //<!--data表示所有需要在页面上动态变化的数据-->
+      //把js中的数据和界面上的内容关联在一起，数据绑定的过程
+      author:"刘晓昱",
+      blogs:[
+        {
+          title:"第一篇博客",
+          tag_id:1,
+          create_time:"2019/11/01"
+        },
+        {
+          title:"第二篇博客",    
+          tag_id:2,    
+          create_time:"2019/11/01"
+        },
+        {    
+          title:"第三篇博客",    
+          tag_id:3,    
+          create_time:"2019/11/01"                                                                  
+        }        
+      ],
+      tags:[
+        {
+          tag_id:1,
+          tag_name:"c语言"
+        },
+        {
+          tag_ud:1,
+          tag_name:"C++"
+        }
+      ],
+    },
+    methods:{
+      tag_id2name(tag_id){
+        //this 访问到当前的app对象
+        //this.tags 就相当于上面定义的标签数组
+        for(var index in this.tags){
+          if(this.tags[index].tag_id == tag_id){
+            return this.tags[index].tag_name;
+          }
+        }
+          return "默认分类";
+          
+    },//end tag_id2name
+
+       get_blogs(tag_id){    
+             var url = '/blog';    
+             if(tag_id != null){    
+                     url = '/blog/?tag_id=' + tag_id;    
+                   }    
+             //最核心操作,访问http服务器数据    
+             //ajax原生API特别难用，Vue也提供了API，环境配置特别麻烦    
+             //此处我们使用Jquery 提供的API    
+             $.ajax({    
+                  url:url,    
+                  type:"get",    
+                  context:this, //此处的this表示Vue对象    
+                  success:function(data,status){    
+                  //data表示响应的body数据    
+                  //status表示响应的状态码    
+                  //请求执行成功之后要执行这个代码，    
+                  //在这个代码中更新数据    
+                  //如果不设置context,此时直接使用this.blogs是会出错的    
+                  //因为此时的this表示当前$这样的jquery对象    
+                  //而不是Vue对象    
+                  //加上context之后，this就表示context中的值    
+                  this.blogs = data;    
+                }    
+            })    
+          }//end get_blogs
+
+    },//end methods:
+});
+//初始化获取数据操作
+app.get_blogs();
+</script>
+</body>
+</html>
